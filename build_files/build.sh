@@ -18,7 +18,7 @@ dnf5 install -y gns3-server gns3-gui rclone
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-
+system-flatpak install flathub com.bitwarden.desktop
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
