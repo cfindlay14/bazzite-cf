@@ -20,7 +20,7 @@ dnf5 install -y gns3-server gns3-gui rclone
 # dnf5 -y copr disable ublue-os/staging
 
 # Install flatpaks 
-flatpak install bitwarden
+flatpak install flathub com.bitwarden.desktop
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
