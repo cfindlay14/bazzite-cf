@@ -1,0 +1,23 @@
+name: my-bazzite-image
+description: A custom Bazzite image with Flatpaks.
+base-image: ghcr.io/ublue-os/bazzite:stable
+
+modules:
+  - type: rpm-ostree
+    install:
+      - htop
+      - neovim
+
+  - type: default-flatpaks
+    system: true
+    user: false
+    remotes:
+      - name: flathub
+        url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    install:
+      - org.mozilla.firefox
+      - com.spotify.Client
+
+  - type: systemd
+    enable:
+      - sshd.service
